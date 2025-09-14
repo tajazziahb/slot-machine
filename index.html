@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <section class="app">
+        <h1>Concert Slot Machine</h1>
+
+        <section class="hud">
+            <section id="balance" class="pill">Balance: $100</section>
+            <section class="pill">Bet scales wins — Match ×5 • Perfect ×15</section>
+        </section>
+
+        <section class="board">
+            <section class="labels">
+                <section>Artist 1</section>
+                <section>Artist 2</section>
+                <section>Artist 3</section>
+            </section>
+
+            <section class="reels">
+                <section id="reel1" class="reel">
+                    <img class="slot" alt="">
+                    <section class="caption">?</section>
+                </section>
+                <section id="reel2" class="reel">
+                    <img class="slot" alt="">
+                    <section class="caption">?</section>
+                </section>
+                <section id="reel3" class="reel">
+                    <img class="slot" alt="">
+                    <section class="caption">?</section>
+                </section>
+            </section>
+
+            <section id="result" class="result">Press SPIN to WIN!</section>
+
+            <section class="controls">
+                <button id="bet-min">BET MIN</button>
+                <button id="bet-max">BET MAX</button>
+                <button id="spin">SPIN</button>
+                <button id="reset">RESET</button>
+            </section>
+
+            <section id="bet-display" class="result">Current Bet: $5</section>
+        </section>
+    </section>
+
+    <!-- Curtain + Stage Flash overlays -->
+    <section class="curtain open" aria-hidden="true">
+        <span class="panel left"></span>
+        <span class="panel right"></span>
+    </section>
+    <section class="stage-flash" aria-hidden="true"></section>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
