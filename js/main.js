@@ -24,6 +24,11 @@ const betDisplay = document.querySelector("#bet-display");
 const curtain = document.querySelector(".curtain");
 const stageFlash = document.querySelector(".stage-flash");
 
+spinButton.addEventListener("click", spin);
+resetButton.addEventListener("click", resetGame);
+betMinButton.addEventListener("click", setBetMin);
+betMaxButton.addEventListener("click", setBetMax);
+
 let balance = 100;
 let bet = 5;
 const minBet = 5;
@@ -54,10 +59,10 @@ function evaluateSpin(chosenCards) {
         counts[card.name] = (counts[card.name] || 0) + 1;
     });
 
-    let mostFrequentArtist = null;
+    let mostFrequentArtist = null;                                  // from ChatGPT
     let highestCount = 0;
 
-    for (const [artistName, count] of Object.entries(counts)) {
+    for (const [artistName, count] of Object.entries(counts)) {   // from ChatGPT
         if (count > highestCount) {
             highestCount = count;
             mostFrequentArtist = artistName;
@@ -87,12 +92,12 @@ function highlightMatches(chosenCards, artist) {
     }
 }
 
-function closeCurtain() { curtain.classList.remove("open"); curtain.classList.add("closed"); }
-function openCurtain() { curtain.classList.remove("closed"); curtain.classList.add("open"); }
+function closeCurtain() { curtain.classList.remove("open"); curtain.classList.add("closed"); } // from ChatGPT
+function openCurtain() { curtain.classList.remove("closed"); curtain.classList.add("open"); } //
 
-function flashStage(ms = 240) {
-    stageFlash.classList.add("show");
-    setTimeout(() => stageFlash.classList.remove("show"), ms);
+function flashStage(ms = 240) {                                     // 
+    stageFlash.classList.add("show");                               //    from ChatGPT   
+    setTimeout(() => stageFlash.classList.remove("show"), ms);      //  
 }
 
 function updateBetDisplay() { betDisplay.textContent = `Current Bet: $${bet}`; }
@@ -109,7 +114,7 @@ async function spin() {
     spinButton.disabled = true;
 
     closeCurtain();
-    await new Promise(resolve => setTimeout(resolve, 360));
+    await new Promise(resolve => setTimeout(resolve, 360));   // from ChatGPT
 
     clearHighlights();
 
@@ -162,7 +167,3 @@ function setBetMax() { bet = maxBet; updateBetDisplay(); }
 updateBalance();
 updateBetDisplay();
 
-spinButton.addEventListener("click", spin);
-resetButton.addEventListener("click", resetGame);
-betMinButton.addEventListener("click", setBetMin);
-betMaxButton.addEventListener("click", setBetMax);
