@@ -113,14 +113,14 @@ h1 {
     text-shadow: 0 0 6px #0ff;
 }
 
-/* Neon glows on win */
+/* Neon glows on win */ /* from ChatGPT */
 @keyframes pulse-gold {
 
     0%,
     100% {
         box-shadow: 0 0 12px #ffd400aa, 0 0 28px #ffd40055;
     }
-
+                                                                    
     50% {
         box-shadow: 0 0 24px #ffd400ff, 0 0 48px #ffd40088;
     }
@@ -202,7 +202,7 @@ button:active {
 .curtain {
     position: fixed;
     inset: 0;
-    pointer-events: none;
+    pointer-events: none;   /* from ChatGPT */
     z-index: 999;
 }
 
@@ -249,7 +249,7 @@ button:active {
     pointer-events: none;
     z-index: 998;
     background:
-        radial-gradient(120% 120% at 50% 80%, rgba(255, 0, 255, .3), transparent 60%),
+        radial-gradient(120% 120% at 50% 80%, rgba(255, 0, 255, .3), transparent 60%),     /* from ChatGPT*/
         radial-gradient(120% 120% at 50% 20%, rgba(0, 255, 255, .3), transparent 60%);
     opacity: 0;
     transition: opacity 240ms ease;
