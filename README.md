@@ -15,7 +15,7 @@ A browser-based slot machine app with spinning reels and randomized results.
 
 ## Tech Stack  
 - HTML / CSS / JavaScript  
-- Netlify (Deployment)  
+- Vercel (Deployment)  
 
 ---
 
